@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const userApi = async (token,cart) =>  {
-    return axios.post('http://localhost:3000/api/user/cart',cart,{
+    return axios.post('http://shop-main-api.vercel.app/api/user/cart',cart,{
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -9,7 +9,7 @@ export const userApi = async (token,cart) =>  {
 }
 
 export const listUserApi = async (token) =>  {
-    return axios.get('http://localhost:3000/api/user/cart',{
+    return axios.get('http://shop-main-api.vercel.app/api/user/cart',{
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -17,7 +17,7 @@ export const listUserApi = async (token) =>  {
 }
 
 export const saveAddress = async (token, address) =>  {
-    return axios.post('http://localhost:3000/api/user/address',
+    return axios.post('http://shop-main-api.vercel.app/api/user/address',
         { address },
         {
         headers: {
@@ -28,7 +28,7 @@ export const saveAddress = async (token, address) =>  {
 
 export const saveOrder = async (token, payload) => {
     // code body
-    return axios.post("http://localhost:3000/api/user/order", payload, {
+    return axios.post("http://shop-main-api.vercel.app/api/user/order", payload, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
@@ -37,7 +37,7 @@ export const saveOrder = async (token, payload) => {
 
 export const getOrders = async (token) => {
     // code body
-    return axios.get("http://localhost:3000/api/user/order", {
+    return axios.get("http://shop-main-api.vercel.app/api/user/order", {
         headers: {
             Authorization: `Bearer ${token}`,
         },

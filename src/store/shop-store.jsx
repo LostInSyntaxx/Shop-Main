@@ -49,7 +49,7 @@ const shopStore = (set, get)=> ({
         },0)
     },
     actionLogin: async (form) => {
-        const res = await axios.post('http://localhost:3000/api/login',form)
+        const res = await axios.post('http://shop-main-api.vercel.app/api/login',form)
         set({
             user: res.data.payload,
             token: res.data.token
